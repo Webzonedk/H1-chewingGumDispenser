@@ -39,7 +39,7 @@ namespace chewingGumDispenser
                     else
                     {
                     Console.WriteLine($"You got a {luckyGum.Taste}");
-                        Thread.Sleep(10);
+                        Thread.Sleep(1000);
                     }
                 }
                 else
