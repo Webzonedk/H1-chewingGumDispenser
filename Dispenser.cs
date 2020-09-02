@@ -4,16 +4,26 @@ using System.Text;
 
 namespace chewingGumDispenser
 {
-    class Dispenser
+   class Dispenser
     {
+
+        //Singleton fallure. as in LOOOOOSEEEEERRRR!!!!
+        //private Dispenser unicDispenser = new Dispenser();
+        //private Dispenser() { }
+
+        //public Dispenser UnicDispenser
+        //{
+        //    get { return unicDispenser; }
+        //}
+
         #region Fields
         private double total = 55;
-        private double blueberryRound = 4;
-        private double blackBerryRound = 4;
-        private double tuttiFruttiRound = 4;
-        private double orangeRound = 4;
-        private double strawberryRound = 4;
-        private double appleRound = 4;
+        private double blueberryRound = 0;
+        private double blackBerryRound = 0;
+        private double tuttiFruttiRound = 0;
+        private double orangeRound = 0;
+        private double strawberryRound = 0;
+        private double appleRound = 0;
         private ChewingGum luckyGum;
         #endregion
 
@@ -28,7 +38,6 @@ namespace chewingGumDispenser
         }
         public List<ChewingGum> gums = new List<ChewingGum>();
         public List<ChewingGum> extraGums = new List<ChewingGum>();
-        public List<Dispenser> displist = new List<Dispenser>();
 
         public Random random = new Random();
         #endregion
@@ -102,7 +111,7 @@ namespace chewingGumDispenser
             {
                 gums.Add(new ChewingGum("apple", "green"));
             }
-            //adding gum objects to the extraGumslist to use by the random to add additional gums if the dispenser is not full by the rounded amount of gums
+            //adding gum objects to the extraGumslist to be used by the random to add additional gums if the dispenser is not full by the rounded amount of gums
             extraGums.Add(new ChewingGum("blueberry", "blue"));
             extraGums.Add(new ChewingGum("blackBerry", "purple"));
             extraGums.Add(new ChewingGum("tuttiFrutti", "yellow"));
@@ -149,7 +158,6 @@ namespace chewingGumDispenser
         {
             while (true)
             {
-
                 switch (Console.ReadKey(true).KeyChar)
                 {
                     case '1':
